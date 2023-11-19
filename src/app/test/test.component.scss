@@ -1,0 +1,44 @@
+/* table.component.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+[class*='mat-column-day']
+, [class*='cdk-column-day'] 
+{
+  max-width: 100px;
+  text-align: center;
+}
+
+td > mat-form-field {
+  display: block;
+}
+
+mat-form-field {
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}
