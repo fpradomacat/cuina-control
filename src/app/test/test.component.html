@@ -1,0 +1,22 @@
+<!-- table.component.html -->
+<table mat-table [dataSource]="tableData">
+  <!-- Distributor Column -->
+  <ng-container matColumnDef="distributor">
+    <th mat-header-cell *matHeaderCellDef>Distribuidor</th>
+    <td mat-cell *matCellDef="let element">{{ element.distributor }}</td>
+  </ng-container>
+
+  <!-- Days Columns -->
+  <ng-container *ngFor="let day of daysOfMonth" matColumnDef="day{{ day }}">
+    <th mat-header-cell *matHeaderCellDef>{{ day }}</th>
+    <td mat-cell *matCellDef="let element">
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="element['day' + day]" />
+      </mat-form-field>
+    </td>
+  </ng-container>
+
+  <!-- Set up the table rows -->
+  <tr mat-header-row *matHeaderRowDef="headersRowDefinition"></tr>
+  <tr mat-row *matRowDef="let row; columns: headersRowDefinition"></tr>
+</table>
