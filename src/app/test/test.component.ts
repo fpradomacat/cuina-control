@@ -36,11 +36,17 @@ export class TestComponent implements OnInit {
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
     const daysInMonth = new Date(currentDate.getFullYear(), currentMonth + 1, 0).getDate();
-  
+
     // Generate an array of numbers from 1 to the number of days in the current month
     const daysArray = Array.from({ length: daysInMonth }, (_, i) => i + 1);
-  
+
     return daysArray;
   }
-  
+
+  setTwoNumberDecimal(element: any, day: string) {
+    const hasDecimalPart = element[day] % 1 !== 0;
+    if (hasDecimalPart) {
+      element[day] = parseFloat(element[day]).toFixed(2);
+    }
+  }
 }
