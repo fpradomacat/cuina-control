@@ -5,13 +5,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-test',
+  selector: 'app-table',
   standalone: true,
   imports: [CommonModule, MatTableModule, MatInputModule, FormsModule],
-  templateUrl: './test.component.html',
-  styleUrl: './test.component.scss'
+  templateUrl: './table.component.html',
+  styleUrl: './table.component.scss'
 })
-export class TestComponent implements OnInit {
+export class TableComponent implements OnInit {
   // Define your data structure for distributors and days
   daysOfMonth: number[] = this.getDaysOfMonth();
   headersRowDefinition: string[] = ['distributor', ...this.daysOfMonth.map(day => 'day' + day)];
