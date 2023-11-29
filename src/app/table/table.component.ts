@@ -29,6 +29,9 @@ export class TableComponent implements OnInit {
     { distributor: 'Jamones ibericos', day3: '270', day6: '84.9', /* ... */ },
     { distributor: 'Fruiteria Sant Joan', day1: '93', day7: '14.5', /* ... */ },
     { distributor: 'Forn de pa', day2: '364.8', day8: '269', /* ... */ },
+    { distributor: 'Forn de pa1', day2: '364.8', day8: '269', /* ... */ },
+    { distributor: 'Forn de pa2', day2: '364.8', day8: '269', /* ... */ },
+    { distributor: 'Forn de pa3', day2: '364.8', day8: '269', /* ... */ },
     // ...
   ];
 
